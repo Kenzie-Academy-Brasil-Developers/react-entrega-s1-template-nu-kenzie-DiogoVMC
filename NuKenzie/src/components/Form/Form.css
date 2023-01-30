@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+main {
+  margin: 0 15px;
+  font-family: "Nunito", sans-serif;
+}
+
+main form {
+  border: solid 1px #e9ecef;
+  border-radius: 4px;
+
+  padding: 2rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+
+  color: #212529;
+
+  margin-bottom: 0.7rem;
+}
+.input-description {
+  border: 2px solid #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+.description-example {
+  font-size: 12px;
+  line-height: 20px;
+  color: #868e96;
+}
+.value-container {
+  display: flex;
+  justify-content: space-between;
+}
+.value {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  position: relative;
+}
+.value label {
+  font-size: 14px;
+  margin: 1rem 0rem;
+}
+.value input {
+  border: 2px solid #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+.value span {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.95rem;
+}
+
+.value-type {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.value-type label {
+  font-size: 14px;
+  margin: 1rem 0rem;
+}
+.value-type select {
+  border: 2px solid #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+.submit {
+  margin-top: 1rem;
+
+  background-color: #fd377e;
+  color: #ffffff;
+  border: none;
+
+  padding: 1rem;
+
+  border: 2px solid #fd377e;
+  border-radius: 8px;
+}
+@media (min-width: 800px) {
+  main {
+    margin: 0 100px;
+  }
+  main form {
+    width: fit-content;
+  }
+}

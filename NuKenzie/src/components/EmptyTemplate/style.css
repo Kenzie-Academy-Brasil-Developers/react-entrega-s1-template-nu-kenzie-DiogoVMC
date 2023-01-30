@@ -1,0 +1,24 @@
+.container {
+  height: 5.5rem;
+  background: #f8f9fa;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+  gap: 1rem;
+  border-left: 3px rgba(233, 236, 239, 1) solid;
+}
+
+.bigger-box {
+  background-color: rgba(233, 236, 239, 1);
+  height: 30%;
+  width: 65%;
+  display: flex;
+}
+.small-box {
+  display: flex;
+  height: 30%;
+  width: 20%;
+  background-color: rgba(233, 236, 239, 1);
+}
