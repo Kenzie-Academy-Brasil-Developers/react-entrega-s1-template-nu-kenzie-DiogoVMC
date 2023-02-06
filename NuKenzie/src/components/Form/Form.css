@@ -76,6 +76,11 @@ main form {
   padding: 1rem;
   background-color: #f8f9fa;
 }
+option {
+  border: solid 1px;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
 .submit {
   margin-top: 1rem;
 
@@ -87,6 +92,9 @@ main form {
 
   border: 2px solid #fd377e;
   border-radius: 8px;
+}
+.submit:hover {
+  background-color: #e34981;
 }
 @media (min-width: 800px) {
   main {

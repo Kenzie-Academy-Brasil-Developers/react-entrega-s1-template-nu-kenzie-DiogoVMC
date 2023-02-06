@@ -6,7 +6,7 @@ export const Form = ({ listTransactions, addToListTransactions }) => {
   const [formData, setFormData] = useState({
     description: "",
     type: "Entrada",
-    value: "",
+    value: 0,
   });
 
   const submit = (event) => {
@@ -19,7 +19,7 @@ export const Form = ({ listTransactions, addToListTransactions }) => {
     setFormData({
       description: "",
       type: "Entrada",
-      value: "",
+      value: 0,
     });
   };
 
@@ -52,13 +52,24 @@ export const Form = ({ listTransactions, addToListTransactions }) => {
         </div>
         <div className="value-type">
           <label htmlFor="">Tipo de Valor </label>
-          <select name="value-type" id="values">
+          <select
+            name="value-type"
+            id="values"
+            onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+          >
             <option value="Entrada">Entrada</option>
-            <option value="Saída">Saida</option>
+            <option value="Saida">Saida</option>
           </select>
         </div>
       </div>
-      <button className="submit">Inserir valor</button>
+      <button
+        className="submit"
+        onChange={() => {
+          Sum(listTransactions);
+        }}
+      >
+        Inserir valor
+      </button>
     </form>
   );
 };

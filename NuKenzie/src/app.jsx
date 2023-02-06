@@ -3,13 +3,14 @@ import React, { useState } from "react";
 import "./index.css";
 import { v4 as uuidv4 } from "uuid";
 import { List } from "./components/List/index.jsx";
+import { Header } from "./components/Header/index.jsx";
+import { Sum } from "./components/Total/index.jsx";
 
 export const App = () => {
   const [listTransactions, setListTransactions] = useState([]);
 
   const addToListTransactions = (transaction) => {
     const newTransaction = { ...transaction, id: uuidv4() };
-    console.log(newTransaction);
     setListTransactions([...listTransactions, newTransaction]);
   };
 
@@ -22,17 +23,16 @@ export const App = () => {
 
   return (
     <>
-      <header>
-        <p>
-          Nu <span className="logo-kenzie"> Kenzie </span>
-        </p>
-        <button> Inicio </button>
-      </header>
+      <Header />
       <main>
-        <Form
-          listTransactions={listTransactions}
-          addToListTransactions={addToListTransactions}
-        />
+        <div className="left-container">
+          <Form
+            listTransactions={listTransactions}
+            addToListTransactions={addToListTransactions}
+          />
+          <Sum listTransactions={listTransactions} />
+        </div>
+
         <List
           listTransactions={listTransactions}
           removeFromListTransaction={removeFromListTransaction}

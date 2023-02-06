@@ -1,0 +1,16 @@
+.totalContainer {
+  border: solid 1px #e9ecef;
+  border-radius: 4px;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+.totalContainer h2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.valueTotal {
+  font-weight: 700;
+  color: #fd377e;
+}

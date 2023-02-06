@@ -55,7 +55,11 @@ header button:hover {
   }
   main form {
     height: 40%;
+    width: 100%;
+  }
+  .left-container {
     width: 45%;
+    height: max-content;
   }
   .list {
     width: 45%;
